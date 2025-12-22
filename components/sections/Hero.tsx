@@ -24,7 +24,7 @@ export function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-[0.95]"
             variants={fadeUp}
           >
-            Unlock Your Child&apos;s{" "}
+            Unlock Your{" "}
             <span className="text-accent relative">
               Creative
               {/* Underline decoration */}

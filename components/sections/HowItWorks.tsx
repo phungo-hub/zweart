@@ -1,5 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
-import { SectionWrapper } from "@/components/ui/SectionWrapper";
+import { MotionSection } from "@/components/ui/MotionSection";
+import { fadeUp } from "@/lib/animations";
 
 const steps = [
   {
@@ -30,9 +34,15 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <SectionWrapper>
+    <MotionSection>
       <Container>
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
           <h2 className="text-3xl sm:text-4xl font-display font-bold">
             How It Works
           </h2>
@@ -40,28 +50,68 @@ export function HowItWorks() {
             Getting started is easy. Here&apos;s how to begin your child&apos;s
             creative journey with ZWEArt.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-[60%] w-full h-0.5 bg-border" />
-              )}
-              <div className="relative bg-white">
-                <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center font-display text-2xl font-bold mb-4">
+            <motion.div
+              key={step.number}
+              className="relative h-full"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                delay: index * 0.15,
+                duration: 0.5,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
+              <motion.div
+                className="relative bg-white border border-border rounded-[16px] p-6 h-full"
+                whileHover={{ y: -5, boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}
+                transition={{ duration: 0.2 }}
+              >
+                {/* Animated number circle */}
+                <motion.div
+                  className="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-display text-xl font-bold mb-4 relative"
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: index * 0.15,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 15,
+                  }}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: "0 0 20px rgba(232, 90, 48, 0.4)",
+                  }}
+                >
                   {step.number}
-                </div>
+                  {/* Pulse ring */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full border-2 border-accent"
+                    initial={{ opacity: 0.5, scale: 1 }}
+                    animate={{ opacity: 0, scale: 1.5 }}
+                    transition={{
+                      delay: index * 0.15 + 0.5,
+                      duration: 1,
+                      repeat: Infinity,
+                      repeatDelay: 2,
+                    }}
+                  />
+                </motion.div>
+
                 <h3 className="text-lg font-display font-semibold">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-muted">{step.description}</p>
-              </div>
-            </div>
+                <p className="mt-2 text-muted text-sm">{step.description}</p>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </Container>
-    </SectionWrapper>
+    </MotionSection>
   );
 }

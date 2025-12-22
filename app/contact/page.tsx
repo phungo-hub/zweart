@@ -106,9 +106,9 @@ export default function ContactPage() {
 
   return (
     <>
-      <SectionWrapper className="bg-slate-50">
+      <SectionWrapper className="bg-surface">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center mb-10">
             <h1 className="text-4xl sm:text-5xl font-display font-bold">
               Get in Touch
             </h1>
@@ -117,11 +117,7 @@ export default function ContactPage() {
               our programs? We&apos;d love to hear from you.
             </p>
           </div>
-        </Container>
-      </SectionWrapper>
 
-      <SectionWrapper>
-        <Container>
           <div className="max-w-2xl mx-auto">
             {isSuccess ? (
               <div className="bg-green-50 border border-green-200 rounded-[24px] p-8 text-center">
