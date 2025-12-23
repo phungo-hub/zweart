@@ -80,12 +80,12 @@ function AnimatedCounter({
 
   return (
     <span ref={ref} className="relative inline-block">
-      {/* Static layer: always accessible and visible */}
-      <span>{display}</span>
+      {/* Static layer: always accessible; hidden visually during animation to prevent overlap */}
+      <span className={showOverlay ? "opacity-0" : "opacity-100"}>{display}</span>
       {/* Animated layer: visual-only */}
       {showOverlay && (
         <span
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           aria-hidden="true"
         >
           {animatedDisplay}

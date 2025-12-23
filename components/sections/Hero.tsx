@@ -24,12 +24,12 @@ export function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-[0.95]"
             variants={fadeUp}
           >
-            Subcultural Arts,{" "}
+            Learn it.{" "}
             <span className="text-accent relative">
-              Ethically
+              Share it.
               {/* Underline decoration */}
               <motion.svg
-                className="absolute -bottom-2 left-0 w-full"
+                className="absolute bottom-1 left-0 w-full"
                 viewBox="0 0 300 12"
                 fill="none"
                 initial={{ pathLength: 0, opacity: 0 }}
@@ -37,15 +37,15 @@ export function Hero() {
                 transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
               >
                 <motion.path
-                  d="M2 8C50 2 100 2 150 6C200 10 250 8 298 4"
+                  d="M2 7C50 3 100 3 150 6C200 9 250 7 298 4"
                   stroke="currentColor"
-                  strokeWidth="3"
+                  strokeWidth="2.5"
                   strokeLinecap="round"
                   fill="none"
                 />
               </motion.svg>
             </span>{" "}
-            Taught
+            Pass it on.
           </motion.h1>
 
           {/* Subtitle */}

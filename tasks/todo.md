@@ -516,3 +516,37 @@ This ensures:
 ## Review - Fix #5
 - `components/sections/FAQ.tsx` now renders all answers server-side and keeps them in the DOM, collapsing via height/opacity animation; accordion buttons include `type="button"`, `aria-expanded`, and `aria-controls`, with panels labeled via `role="region"`/`aria-labelledby`.
 - Default state opens the first FAQ for quicker scan; content remains accessible and SEO-visible even when collapsed.
+
+---
+
+# Fix #6: Hero Headline Update
+
+## Plan
+- [x] Update hero headline text in `components/sections/Hero.tsx` from "Subcultural Arts, Ethically Taught" to "Learn it. Share it. Pass it on." without other layout/style changes.
+- [x] Re-verify hero renders correctly with new copy and underline treatment remains appropriate.
+
+## Review - Fix #6
+- Updated `components/sections/Hero.tsx` headline copy to "Learn it. Share it. Pass it on." while keeping the existing underline treatment on the middle phrase; no layout or style changes otherwise.
+
+---
+
+# Fix #7: Hero Underline Overlap
+
+## Plan
+- [x] Adjust the underline decoration in `components/sections/Hero.tsx` so it no longer overlaps text on the following line.
+- [x] Keep layout and styling intact aside from spacing/position tweak to the underline.
+
+## Review - Fix #7
+- Raised underline position and reduced stroke height/weight in `components/sections/Hero.tsx` so the animated line no longer touches the next line; layout and styling otherwise unchanged.
+
+---
+
+# Fix #8: Animated Counter Overlap
+
+## Plan
+- [x] Adjust `AnimatedCounter` in `components/sections/ProofStrip.tsx` so the animated overlay does not visually overlap with the static final value during animation.
+- [x] Keep SSR/accessible static text intact and ensure aria-hidden overlay remains visual-only; no layout/styling changes beyond resolving the overlap.
+- [x] Verify counters animate cleanly with only one visible layer at a time and still render final values on SSR/JS-off.
+
+## Review - Fix #8
+- Updated `components/sections/ProofStrip.tsx` to hide the static value visually while the animated overlay is shown (keeping it accessible), preventing overlapping numbers during animation; overlay remains aria-hidden and pointer-events-none.
