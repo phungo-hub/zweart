@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { MotionSection } from "@/components/ui/MotionSection";
 import { fadeUp, staggerContainer } from "@/lib/animations";
@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <MotionSection id="faq" className="bg-surface">
@@ -92,11 +92,11 @@ export function FAQ() {
             <motion.div
               key={index}
               className="bg-white border border-border rounded-[16px] overflow-hidden"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
                   transition: {
                     delay: index * 0.08,
                     duration: 0.4,
@@ -110,8 +110,11 @@ export function FAQ() {
             >
               <motion.button
                 className="w-full px-6 py-4 text-left flex items-center justify-between gap-4"
+                id={`faq-question-${index}`}
+                type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
                 whileHover={{ backgroundColor: "rgba(232, 90, 48, 0.03)" }}
                 transition={{ duration: 0.2 }}
               >
@@ -132,27 +135,31 @@ export function FAQ() {
                   />
                 </motion.svg>
               </motion.button>
-              <AnimatePresence initial={false}>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <motion.div
-                      className="px-6 pb-4"
-                      initial={{ y: -10 }}
-                      animate={{ y: 0 }}
-                      exit={{ y: -10 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <p className="text-muted">{faq.answer}</p>
-                    </motion.div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <motion.div
+                id={`faq-answer-${index}`}
+                role="region"
+                aria-labelledby={`faq-question-${index}`}
+                initial={false}
+                animate={{
+                  height: openIndex === index ? "auto" : 0,
+                  opacity: openIndex === index ? 1 : 0,
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+                aria-hidden={openIndex !== index}
+              >
+                <motion.div
+                  className="px-6 pb-4"
+                  initial={false}
+                  animate={{
+                    y: openIndex === index ? 0 : -8,
+                    opacity: openIndex === index ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p className="text-muted">{faq.answer}</p>
+                </motion.div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

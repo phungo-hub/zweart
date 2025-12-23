@@ -496,16 +496,23 @@ This ensures:
 # Fix #4: About Page Challenge List Bullet Formatting
 
 ## Plan
-- [ ] Inspect the "The Challenge We Solve" list in `app/about/page.tsx` to confirm source of the doubled bullet artifacts.
-- [ ] Apply minimal change (remove default list-style or duplicate bullet character) so bullets render cleanly while keeping wording/structure.
-- [ ] Re-check the About page lists to ensure accessibility with semantic `<ul><li>` and no unintended layout changes.
+- [x] Inspect the "The Challenge We Solve" list in `app/about/page.tsx` to confirm source of the doubled bullet artifacts.
+- [x] Apply minimal change (remove default list-style or duplicate bullet character) so bullets render cleanly while keeping wording/structure.
+- [x] Re-check the About page lists to ensure accessibility with semantic `<ul><li>` and no unintended layout changes.
+
+## Review - Fix #4
+- Updated `app/about/page.tsx` challenge list to remove default list markers (`list-none`) so the custom bullet character no longer renders doubled while preserving semantics.
 
 ---
 
 # Fix #5: FAQ Answers Server-Rendered & Accessible
 
 ## Plan
-- [ ] Locate FAQ accordion implementation and confirm why answers are not in initial HTML (conditional render on open).
-- [ ] Update `components/sections/FAQ.tsx` so answers are always in the DOM (SSR) but visually collapsed; keep accordion UX with semantic buttons and proper `aria-expanded`/`aria-controls`/`id`.
-- [ ] Ensure collapsed answers remain keyboard reachable when expanded and remain SEO-visible; avoid new dependencies and minimize code changes.
-- [ ] Re-check FAQ rendering for first-load HTML to confirm answers exist and accessibility attributes are correct.
+- [x] Locate FAQ accordion implementation and confirm why answers are not in initial HTML (conditional render on open).
+- [x] Update `components/sections/FAQ.tsx` so answers are always in the DOM (SSR) but visually collapsed; keep accordion UX with semantic buttons and proper `aria-expanded`/`aria-controls`/`id`.
+- [x] Ensure collapsed answers remain keyboard reachable when expanded and remain SEO-visible; avoid new dependencies and minimize code changes.
+- [x] Re-check FAQ rendering for first-load HTML to confirm answers exist and accessibility attributes are correct.
+
+## Review - Fix #5
+- `components/sections/FAQ.tsx` now renders all answers server-side and keeps them in the DOM, collapsing via height/opacity animation; accordion buttons include `type="button"`, `aria-expanded`, and `aria-controls`, with panels labeled via `role="region"`/`aria-labelledby`.
+- Default state opens the first FAQ for quicker scan; content remains accessible and SEO-visible even when collapsed.
