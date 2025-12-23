@@ -10,25 +10,25 @@ const steps = [
     number: "1",
     title: "Book a Trial",
     description:
-      "Sign up for a free trial class to experience our teaching style and meet our instructors.",
+      "Sign up for a trial class to experience our ethical teaching approach and meet our artists.",
   },
   {
     number: "2",
     title: "Choose Your Program",
     description:
-      "Select the program that best fits your child's age, interests, and skill level.",
+      "Select the subcultural art program that fits your child's interests—in-studio or online.",
   },
   {
     number: "3",
-    title: "Start Creating",
+    title: "Learn with Credit",
     description:
-      "Join regular classes and watch your child's artistic abilities flourish week by week.",
+      "Study with verified artists who teach proper credit to cultural sources and heritage.",
   },
   {
     number: "4",
-    title: "Showcase & Celebrate",
+    title: "Exhibit Your Work",
     description:
-      "Display artwork in our gallery exhibitions and celebrate creative achievements.",
+      "Showcase artwork in virtual exhibitions and connect with the wider community.",
   },
 ];
 

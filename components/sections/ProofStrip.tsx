@@ -6,15 +6,15 @@ import { Container } from "@/components/ui/Container";
 
 const quickTestimonials = [
   {
-    quote: "My daughter's confidence has grown so much!",
+    quote: "My daughter finally connects with her cultural roots through art.",
     author: "Sarah M.",
   },
   {
-    quote: "The best art classes in Toronto, hands down.",
+    quote: "The ethical approach to teaching is exactly what we wanted.",
     author: "David L.",
   },
   {
-    quote: "My son can't wait for his weekly class.",
+    quote: "OMO flexibility means we never miss a class across provinces.",
     author: "Michelle K.",
   },
 ];

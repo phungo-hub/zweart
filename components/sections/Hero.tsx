@@ -24,9 +24,9 @@ export function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-[0.95]"
             variants={fadeUp}
           >
-            Unlock Your{" "}
+            Subcultural Arts,{" "}
             <span className="text-accent relative">
-              Creative
+              Ethically
               {/* Underline decoration */}
               <motion.svg
                 className="absolute -bottom-2 left-0 w-full"
@@ -45,17 +45,17 @@ export function Hero() {
                 />
               </motion.svg>
             </span>{" "}
-            Potential
+            Taught
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
             className="mt-8 text-lg sm:text-xl lg:text-2xl text-muted max-w-2xl mx-auto leading-relaxed"
-            variants={fadeUp}
+          variants={fadeUp}
           >
-            Toronto-based art school offering inspiring classes for kids and
-            teens ages 6-17. From traditional drawing to digital animation, we
-            nurture every creative journey.
+            Canada&apos;s Online-Merge-Offline (OMO) platform connecting students
+            and artists through hybrid classes, virtual exhibitions, and a
+            culturally aware community. Proper credit. Protected heritage.
           </motion.p>
 
           {/* CTA buttons */}

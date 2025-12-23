@@ -8,39 +8,49 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const faqs = [
   {
+    question: "What are subcultural arts?",
+    answer:
+      "Subcultural arts are artistic traditions rooted in specific cultural communities—often underrepresented in mainstream art education. We teach these arts with proper credit to their origins and respect for cultural heritage.",
+  },
+  {
+    question: "How do you ensure ethical teaching?",
+    answer:
+      "Every artist on our platform is verified for cultural knowledge. We ensure proper credit to cultural sources, protect artists' intellectual property, and teach students to respect the heritage behind each art form.",
+  },
+  {
+    question: "What is the Online-Merge-Offline (OMO) method?",
+    answer:
+      "OMO combines in-studio and online instruction so students across Canada can access quality subcultural art education regardless of geography. Attend in person, join virtually, or switch between formats.",
+  },
+  {
     question: "What ages do you teach?",
     answer:
-      "We offer programs for kids ages 6-10 and teens ages 11-17. Each program is designed specifically for the developmental stage and interests of that age group.",
+      "We offer programs for kids ages 6-10 and teens ages 11-17. Each program is designed for that age group's developmental stage and interests.",
   },
   {
     question: "Do students need any prior art experience?",
     answer:
-      "Not at all! We welcome students of all skill levels, from complete beginners to those with some experience. Our instructors adapt their teaching to meet each student where they are.",
+      "Not at all! We welcome students of all skill levels. Our instructors adapt their teaching to meet each student where they are.",
   },
   {
     question: "What's included in a trial class?",
     answer:
-      "A trial class is a full regular session where your child will participate in that day's lesson. All materials are provided, and you'll get to see firsthand how our classes work and how your child responds.",
+      "A trial class is a full session where your child participates in that day's lesson. All materials are provided, and you'll see firsthand how our classes work.",
   },
   {
-    question: "What is the OMO (Online-Merged-Offline) method?",
+    question: "Can artists teach on your platform?",
     answer:
-      "OMO is our flexible learning approach that combines in-studio and online instruction. Students can attend classes in person or virtually, with access to recorded lessons and resources for practice at home.",
+      "Yes! We're always looking for subcultural artists who want paid teaching opportunities, exposure through virtual exhibitions, and IP protection for their work. Contact us to learn more.",
   },
   {
-    question: "What materials do students need?",
+    question: "What are virtual exhibitions?",
     answer:
-      "For in-studio classes, we provide all materials. For online classes, we'll give you a supply list of basic art materials. Digital art students will need a tablet with a stylus (we can recommend options).",
-  },
-  {
-    question: "What's your class size?",
-    answer:
-      "We keep our classes small, typically 6-8 students maximum, to ensure each child receives personalized attention and feedback from our instructors.",
+      "Students and artists can showcase their work in our online gallery, reaching a wider audience beyond their local community. It's part of how we celebrate and share subcultural arts.",
   },
   {
     question: "Can I switch between online and in-person classes?",
     answer:
-      "Yes! Our OMO method allows for flexibility. You can switch between formats based on your schedule. Just let us know in advance so we can prepare accordingly.",
+      "Yes! Our OMO method allows flexibility. Switch between formats based on your schedule—just let us know in advance.",
   },
   {
     question: "What's your refund policy?",

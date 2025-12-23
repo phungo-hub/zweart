@@ -31,8 +31,8 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-white/70 max-w-sm">
-              Toronto-based art school nurturing creative minds for kids and
-              teens ages 6-17.
+              Canada&apos;s OMO platform for ethical subcultural art education.
+              Proper credit. Protected heritage. Ages 6-17.
             </p>
           </div>
 

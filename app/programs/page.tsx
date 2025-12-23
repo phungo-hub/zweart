@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Programs - ZWEArt",
   description:
-    "Explore our art programs for kids and teens ages 6-17. From traditional art to digital animation, find the perfect fit for your child.",
+    "Subcultural art programs for kids and teens ages 6-17, taught ethically with proper credit via our OMO (Online-Merge-Offline) method. Available across Canada.",
 };
 
 const programs = [
@@ -77,9 +77,9 @@ export default function ProgramsPage() {
               Our Programs
             </h1>
             <p className="mt-6 text-lg text-muted">
-              Every young artist is unique. That&apos;s why we offer specialized
-              programs designed to meet students exactly where they are and help
-              them grow.
+              Subcultural art education for kids and teens ages 6-17. Learn from
+              verified artists who ensure proper credit to cultural sources—available
+              in-studio or online across Canada via our OMO method.
             </p>
             <div className="mt-8">
               <Button href="/contact">Book a trial class</Button>

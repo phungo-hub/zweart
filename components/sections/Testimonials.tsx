@@ -8,21 +8,21 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const testimonials = [
   {
     quote:
-      "ZWEArt has been transformative for my daughter. She started as a shy kid who was afraid to draw, and now she confidently creates beautiful artwork and has even won a local art competition. The instructors are patient, encouraging, and truly talented.",
+      "ZWEArt helped my daughter connect with her Vietnamese heritage through art. The instructors teach with proper credit to cultural sources—something we couldn't find elsewhere. She's now confident in both her skills and her identity.",
     author: "Jennifer Thompson",
     role: "Parent of Emma, age 9",
     program: "Kids Art Program",
   },
   {
     quote:
-      "As a teenager, my son was hesitant about 'art classes,' but ZWEArt's teen program changed his mind completely. He's now building a portfolio for art school applications and has developed skills I never knew he had. Worth every penny.",
+      "My son was hesitant about art classes, but ZWEArt's ethical approach won him over. He's building a portfolio with culturally credited work for art school applications. The mentorship from real artists has been invaluable.",
     author: "Michael Rodriguez",
     role: "Parent of Carlos, age 15",
     program: "Teen Studio Program",
   },
   {
     quote:
-      "The digital art program is incredible. My kids learned Procreate and basic animation in just a few months. The OMO method is perfect for our busy schedule—we can switch between online and in-person classes seamlessly.",
+      "Living in rural Alberta, we thought quality subcultural art education was out of reach. The OMO method changed that—my kids learn from verified artists and showcase work in virtual exhibitions. Geography is no longer a barrier.",
     author: "Amanda Chen",
     role: "Parent of twins, ages 12",
     program: "Digital Art & Animation",
@@ -41,11 +41,11 @@ export function Testimonials() {
           variants={fadeUp}
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold">
-            What Parents Say
+            What Families Say
           </h2>
           <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
-            Don&apos;t just take our word for it—hear from families who&apos;ve
-            experienced the ZWEArt difference.
+            Families across Canada choosing ethical subcultural art education
+            with proper credit and protected heritage.
           </p>
         </motion.div>
 

@@ -110,14 +110,14 @@ export function FinalCTA() {
             className="text-3xl sm:text-4xl font-display font-bold relative z-10"
             variants={fadeUp}
           >
-            Ready to Start Your Child&apos;s Art Journey?
+            Ready to Explore Subcultural Arts?
           </motion.h2>
           <motion.p
             className="mt-4 text-lg text-white/90 max-w-2xl mx-auto relative z-10"
             variants={fadeUp}
           >
-            Join hundreds of Toronto families who&apos;ve discovered the joy of
-            creative learning at ZWEArt. Book a free trial class today.
+            Join families across Canada who value ethical art education with
+            proper credit to cultural sources. Book a trial class today.
           </motion.p>
 
           <motion.div

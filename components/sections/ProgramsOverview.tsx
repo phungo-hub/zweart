@@ -9,31 +9,31 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const programs = [
   {
     title: "Kids Art (6-10)",
-    description: "Foundation art skills through playful exploration",
+    description: "Subcultural art foundations with proper credit to heritage",
     benefits: [
+      "Learn traditional techniques from verified cultural artists",
       "Build confidence through creative expression",
-      "Learn drawing, painting, and mixed media basics",
-      "Small class sizes for personalized attention",
+      "Small classes via OMO—in-studio or online across Canada",
     ],
     href: "/programs#kids",
   },
   {
     title: "Teen Studio (11-17)",
-    description: "Advanced techniques for aspiring young artists",
+    description: "Advanced subcultural techniques with ethical practice",
     benefits: [
-      "Portfolio development for high school applications",
-      "Master advanced drawing and painting techniques",
-      "Explore personal artistic style",
+      "Portfolio development with culturally credited work",
+      "Master techniques while respecting artistic heritage",
+      "Exhibit work in virtual galleries",
     ],
     href: "/programs#teens",
   },
   {
     title: "Digital Art & Animation",
-    description: "Modern digital skills for the creative future",
+    description: "Digital tools for subcultural art expression",
     benefits: [
-      "Learn industry-standard digital tools",
-      "Create animations and digital illustrations",
-      "Build skills for creative careers",
+      "Learn industry-standard tools (Procreate, etc.)",
+      "Create animations honoring cultural traditions",
+      "Showcase work through virtual exhibitions",
     ],
     href: "/programs#digital",
   },
@@ -45,11 +45,11 @@ export function ProgramsOverview() {
       <Container>
         <motion.div className="text-center mb-12" variants={fadeUp}>
           <h2 className="text-3xl sm:text-4xl font-display font-bold">
-            Programs for Every Young Artist
+            Subcultural Art Programs
           </h2>
           <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
-            Whether your child is just starting or ready to take their art to
-            the next level, we have the perfect program.
+            Ethical art education with proper credit to cultural sources.
+            Available across Canada via our Online-Merge-Offline (OMO) method.
           </p>
         </motion.div>
 

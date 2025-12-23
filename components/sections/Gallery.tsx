@@ -30,11 +30,11 @@ export function Gallery() {
           variants={fadeUp}
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold">
-            Student Gallery
+            Virtual Exhibition
           </h2>
           <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
-            Explore the amazing creations from our talented students. Every
-            piece tells a unique story.
+            Student and artist work showcased to a wider audience. Subcultural
+            arts with proper credit, shared across Canada.
           </p>
         </motion.div>
 

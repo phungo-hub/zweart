@@ -17,8 +17,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ZWEArt - Art Classes for Kids & Teens in Toronto",
-  description: "Toronto-based art school offering creative classes for kids ages 6-17. Learn drawing, painting, digital art, and animation with our proven OMO method.",
+  title: "ZWEArt - Subcultural Art Education Across Canada",
+  description: "Canada's Online-Merge-Offline (OMO) platform for ethical subcultural art education. Connecting students and artists with proper credit and protected heritage. Ages 6-17.",
 };
 
 export default function RootLayout({

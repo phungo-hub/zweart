@@ -113,8 +113,8 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="mt-6 text-lg text-muted">
-              Ready to start your child&apos;s art journey? Have questions about
-              our programs? We&apos;d love to hear from you.
+              Ready for ethical subcultural art education? Questions about programs
+              or artist teaching opportunities? We&apos;d love to hear from you.
             </p>
           </div>
 
@@ -221,10 +221,11 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={inputStyles}
                     >
-                      <option value="">Select a program...</option>
+                      <option value="">Select an option...</option>
                       <option value="kids">Kids Art (Ages 6-10)</option>
                       <option value="teens">Teen Studio (Ages 11-17)</option>
-                      <option value="digital">Digital Art & Animation</option>
+                      <option value="digital">Digital Art &amp; Animation</option>
+                      <option value="artist">I&apos;m an artist interested in teaching</option>
                       <option value="unsure">Not sure yet</option>
                     </select>
                   </div>

@@ -6,28 +6,29 @@ import { MotionSection } from "@/components/ui/MotionSection";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const benefits = [
-  "Flexible learning that fits your schedule—attend in-studio or join online",
-  "Seamless transitions between formats without missing a beat",
-  "Access recorded lessons and resources anytime for extra practice",
+  "Learn subcultural arts from verified artists who ensure proper credit to cultural sources",
+  "Access classes from anywhere in Canada—in-studio, online, or hybrid",
+  "Showcase your work in virtual exhibitions to a wider audience",
+  "Join a culturally aware community with mentorship and peer support",
 ];
 
 const steps = [
   {
     number: "01",
     title: "Learn",
-    description: "Join live classes in-studio or online with expert instructors",
+    description: "Study subcultural arts with artists who honor cultural heritage",
     color: "bg-accent",
   },
   {
     number: "02",
-    title: "Practice",
-    description: "Access resources and recordings to reinforce skills at home",
+    title: "Connect",
+    description: "Join a community for mentorship, peer support, and knowledge exchange",
     color: "bg-secondary",
   },
   {
     number: "03",
-    title: "Create",
-    description: "Complete projects with feedback and showcase your work",
+    title: "Showcase",
+    description: "Display your work in virtual exhibitions and reach a wider audience",
     color: "bg-[#F7C948]",
   },
 ];
@@ -48,11 +49,11 @@ export function OMOMethod() {
               className="text-3xl sm:text-4xl font-display font-bold"
               variants={fadeUp}
             >
-              The OMO Method
+              The Online-Merge-Offline (OMO) Method
             </motion.h2>
             <motion.p className="mt-4 text-lg text-muted" variants={fadeUp}>
-              Our Online-Merged-Offline approach gives you the best of both
-              worlds—flexibility and hands-on learning combined.
+              Making subcultural arts accessible, sustainable, and ethically
+              taught—regardless of geography.
             </motion.p>
             <motion.ul className="mt-6 space-y-4" variants={staggerContainer}>
               {benefits.map((benefit, index) => (

@@ -7,7 +7,7 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 export const metadata: Metadata = {
   title: "About - ZWEArt",
   description:
-    "Learn about ZWEArt, a unique online-merged-offline platform crafted for art enthusiasts to come together, share their creativity, and enrich their artistic journeys.",
+    "ZWEArt is Canada's OMO platform for subcultural art education. We connect students and artists through ethical teaching, virtual exhibitions, and a culturally aware community.",
 };
 
 const team = [
@@ -49,25 +49,25 @@ const timeline = [
   {
     date: "February",
     year: "2022",
-    title: "Our story begins",
+    title: "Team formation",
     description:
-      "Our art enthusiast group gathers regularly to brainstorm ideas for Omo art, also known as Zwearts. Together, we fuel creativity and collaborate to bring our unique visions to life.",
+      "A group of art enthusiasts and educators came together to address the gap in accessible, ethical subcultural art education across Canada.",
     position: "right",
   },
   {
     date: "August",
     year: "2023",
-    title: "Website development",
+    title: "Platform development",
     description:
-      "We are actively in the process of developing our website, concurrently engaging with the artists' community for marketing activities. This strategic approach aims to introduce our platforms to art enthusiasts and foster a vibrant creative exchange.",
+      "Began building the OMO platform while partnering with artists to establish ethical teaching practices and proper credit frameworks.",
     position: "right",
   },
   {
     date: "December",
     year: "2023",
-    title: "Graduation certificate with MTA and website launch",
+    title: "MTA graduation and launch",
     description:
-      "Marking the culmination of our 18-month journey with MTA, we proudly present our graduation certificate alongside the launch of our website. Armed with comprehensive knowledge and skills acquired during this enriching experience, we are well-prepared to enter the market with confidence.",
+      "Completed the 18-month MTA accelerator program and launched our platform to connect students and artists across Canada.",
     position: "left",
   },
 ];
@@ -80,12 +80,13 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-accent">
-              About Zweart
+              About ZWEArt
             </h1>
             <p className="mt-6 text-lg text-muted">
-              ZweartArt is a unique online-merged-offline platform crafted for
-              art enthusiasts to come together, share their creativity, and
-              enrich their artistic journeys.
+              Canada&apos;s Online-Merge-Offline (OMO) platform for subcultural art
+              education. We connect students and artists through hybrid classes,
+              virtual exhibitions, and a culturally aware community—with proper
+              credit and protected heritage at the core.
             </p>
           </div>
         </Container>
@@ -96,18 +97,32 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-accent text-center">
-              This is our story.
+              The Challenge We Solve
             </h2>
             <p className="mt-6 text-center text-muted">
-              At Zweart, we cater to the young and creative minds who never
-              settle, always thrive on progress, and are on a continuous quest
-              for fresh ideas and delightful experiences in their artistic
-              endeavors. In an era of unprecedented connectivity, the world of
-              young artists deserves an educational partner that shares their
-              enthusiasm for innovation. Our platform is designed to adapt to
-              children&apos;s learning needs, empowering them with creative
-              control and guiding them into enchanting new artistic realms,
-              where imagination knows no bounds.
+              Families across Canada face real barriers to subcultural art education:
+            </p>
+            <ul className="mt-4 max-w-xl mx-auto space-y-2 text-muted">
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>Students dispersed across geography with limited local expertise</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>Risk of cultural appropriation without proper credit to sources</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>Artists lacking sustainable income and exposure for their craft</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">•</span>
+                <span>Low awareness of subcultural arts outside traditional communities</span>
+              </li>
+            </ul>
+            <p className="mt-6 text-center text-muted">
+              In a survey of 559 respondents, 43.5% agreed there should be more
+              art activities outside of school. ZWEArt exists to fill that gap—ethically.
             </p>
             {/* Image placeholder for carousel */}
             <div className="mt-10 relative aspect-[16/9] rounded-[24px] overflow-hidden bg-slate-200">
@@ -127,21 +142,34 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-accent text-center">
-              Why we created Zweart
+              Our Solution
             </h2>
             <p className="mt-6 text-center text-muted">
-              At our core, we provide a hybrid art learning platform that
-              seamlessly combines online and offline experiences, catering to
-              the diverse needs of both art enthusiasts and children. With a
-              special emphasis on cultural specialization, our platform offers a
-              unique opportunity to explore and celebrate the rich tapestry of
-              global artistry, fostering an environment where passion can
-              thrive, and creativity can flourish. Whether you&apos;re an adult
-              eager to dive deeper into the art world or a young artist
-              discovering your talents, we are here to help you not only share
-              your love for art but also nurture your growth in this exciting
-              journey of artistic expression.
+              ZWEArt is an integrated Online-Merge-Offline (OMO) platform that addresses
+              these challenges directly:
             </p>
+            <ul className="mt-4 max-w-xl mx-auto space-y-2 text-muted">
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">✓</span>
+                <span><strong>Ethical teaching:</strong> Proper credit to cultural sources, IP protection for artists</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">✓</span>
+                <span><strong>Hybrid access:</strong> In-studio, online, or both—regardless of location</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">✓</span>
+                <span><strong>Virtual exhibitions:</strong> Showcase student and artist work to a wider audience</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">✓</span>
+                <span><strong>Community:</strong> Mentorship, peer support, and cultural knowledge exchange</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent font-bold">✓</span>
+                <span><strong>Artist sustainability:</strong> Paid teaching opportunities and exposure for artists</span>
+              </li>
+            </ul>
             {/* Artwork image */}
             <div className="mt-10 flex justify-center">
               <div className="relative w-full max-w-xl aspect-[4/3] rounded-[24px] overflow-hidden bg-slate-200">
@@ -162,21 +190,28 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-accent text-center">
-              What we do
+              Who We Serve
             </h2>
-            <p className="mt-6 text-center text-muted">
-              At our core, we provide a hybrid art learning platform that
-              seamlessly combines online and offline experiences, catering to
-              the diverse needs of both art enthusiasts and children. With a
-              special emphasis on cultural specialization, our platform offers a
-              unique opportunity to explore and celebrate the rich tapestry of
-              global artistry, fostering an environment where passion can
-              thrive, and creativity can flourish. Whether you&apos;re an adult
-              eager to dive deeper into the art world or a young artist
-              discovering your talents, we are here to help you not only share
-              your love for art but also nurture your growth in this exciting
-              journey of artistic expression.
-            </p>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-[16px] border border-slate-200">
+                <h3 className="font-display font-bold text-lg">For Students &amp; Families</h3>
+                <ul className="mt-3 space-y-2 text-muted text-sm">
+                  <li>• Immigrant children seeking connection to cultural heritage</li>
+                  <li>• Second-generation children exploring their roots through art</li>
+                  <li>• Arts-curious children wanting to learn beyond school</li>
+                  <li>• Families who value ethical, credited art education</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-[16px] border border-slate-200">
+                <h3 className="font-display font-bold text-lg">For Artists</h3>
+                <ul className="mt-3 space-y-2 text-muted text-sm">
+                  <li>• Subcultural artists seeking paid teaching opportunities</li>
+                  <li>• Artists wanting exposure through virtual exhibitions</li>
+                  <li>• Creators who value IP protection and proper credit</li>
+                  <li>• Mentors passionate about cultural knowledge exchange</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </Container>
       </SectionWrapper>
@@ -186,10 +221,10 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold leading-relaxed">
-              &quot;Art is the universal language that speaks to the heart,
-              transcending boundaries and inspiring limitless creativity&quot;
+              &quot;Subcultural arts deserve to be taught with proper credit,
+              protected heritage, and sustainable practice.&quot;
             </blockquote>
-            <cite className="mt-6 block text-muted not-italic">--Zweart--</cite>
+            <cite className="mt-6 block text-muted not-italic">— ZWEArt Mission</cite>
           </div>
         </Container>
       </SectionWrapper>
@@ -256,8 +291,7 @@ export default function AboutPage() {
               Our Team
             </h2>
             <p className="mt-4 text-center text-muted">
-              Meet the passionate individuals behind our artistic journey, the
-              heart and soul of our creative community.
+              A team committed to ethical subcultural art education across Canada.
             </p>
 
             {/* Team grid */}
