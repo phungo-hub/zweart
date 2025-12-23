@@ -20,18 +20,32 @@ const quickTestimonials = [
 ];
 
 const metrics = [
-  { value: 500, suffix: "+", label: "Students taught" },
-  { value: 5, suffix: "", label: "Years of experience" },
-  { value: 4.9, suffix: "", label: "Star rating" },
+  { value: 500, suffix: "+", display: "500+", label: "Students taught" },
+  { value: 5, suffix: "", display: "5", label: "Years of experience" },
+  { value: 4.9, suffix: "", display: "4.9", label: "Star rating" },
 ];
 
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-  const [count, setCount] = useState(0);
+function AnimatedCounter({
+  value,
+  suffix,
+  display,
+}: {
+  value: number;
+  suffix: string;
+  display: string;
+}) {
+  const [count, setCount] = useState(value); // SSR-safe: render final value
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && !animationComplete) {
+      setCount(0); // Animate from 0 on client
+      setShowOverlay(false);
+
+      let overlayShown = false;
       const duration = 2000;
       const steps = 60;
       const increment = value / steps;
@@ -39,22 +53,45 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
       const timer = setInterval(() => {
         current += increment;
-        if (current >= value) {
-          setCount(value);
+        const nextValue = current >= value ? value : current;
+
+        if (!overlayShown && nextValue > 0) {
+          overlayShown = true;
+          setShowOverlay(true); // Show animated layer only after first tick to avoid 0 flash
+        }
+
+        setCount(nextValue);
+
+        if (nextValue === value) {
+          setAnimationComplete(true);
+          setShowOverlay(false); // Let static layer take over
           clearInterval(timer);
-        } else {
-          setCount(Math.floor(current * 10) / 10);
         }
       }, duration / steps);
 
       return () => clearInterval(timer);
     }
-  }, [isInView, value]);
+  }, [isInView, value, animationComplete]);
+
+  // Format the animated count
+  const animatedDisplay = Number.isInteger(value)
+    ? Math.round(count)
+    : count.toFixed(1);
 
   return (
-    <span ref={ref}>
-      {Number.isInteger(value) ? Math.floor(count) : count.toFixed(1)}
-      {suffix}
+    <span ref={ref} className="relative inline-block">
+      {/* Static layer: always accessible and visible */}
+      <span>{display}</span>
+      {/* Animated layer: visual-only */}
+      {showOverlay && (
+        <span
+          className="absolute inset-0"
+          aria-hidden="true"
+        >
+          {animatedDisplay}
+          {suffix}
+        </span>
+      )}
     </span>
   );
 }
@@ -125,9 +162,14 @@ export function ProofStrip() {
                 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                aria-label={`${metric.display} ${metric.label}`}
               >
                 <p className="text-2xl sm:text-3xl font-display font-bold text-accent">
-                  <AnimatedCounter value={metric.value} suffix={metric.suffix} />
+                  <AnimatedCounter
+                    value={metric.value}
+                    suffix={metric.suffix}
+                    display={metric.display}
+                  />
                 </p>
                 <p className="text-sm text-muted">{metric.label}</p>
               </motion.div>

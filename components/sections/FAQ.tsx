@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "How do you ensure ethical teaching?",
     answer:
-      "Every artist on our platform is verified for cultural knowledge. We ensure proper credit to cultural sources, protect artists' intellectual property, and teach students to respect the heritage behind each art form.",
+      "Our artist mentors bring deep cultural knowledge to every class. We ensure proper credit to cultural sources, protect artists' intellectual property, and teach students to respect the heritage behind each art form.",
   },
   {
     question: "What is the Online-Merge-Offline (OMO) method?",

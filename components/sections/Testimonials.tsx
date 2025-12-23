@@ -22,7 +22,7 @@ const testimonials = [
   },
   {
     quote:
-      "Living in rural Alberta, we thought quality subcultural art education was out of reach. The OMO method changed that—my kids learn from verified artists and showcase work in virtual exhibitions. Geography is no longer a barrier.",
+      "Living in rural Alberta, we thought quality subcultural art education was out of reach. The OMO method changed that—my kids learn from artist mentors and showcase work in virtual exhibitions. Geography is no longer a barrier.",
     author: "Amanda Chen",
     role: "Parent of twins, ages 12",
     program: "Digital Art & Animation",

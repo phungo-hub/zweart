@@ -22,7 +22,7 @@ const steps = [
     number: "3",
     title: "Learn with Credit",
     description:
-      "Study with verified artists who teach proper credit to cultural sources and heritage.",
+      "Study with artist mentors who teach proper credit to cultural sources and heritage.",
   },
   {
     number: "4",

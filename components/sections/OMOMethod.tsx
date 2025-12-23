@@ -6,7 +6,7 @@ import { MotionSection } from "@/components/ui/MotionSection";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const benefits = [
-  "Learn subcultural arts from verified artists who ensure proper credit to cultural sources",
+  "Learn subcultural arts from artist mentors who ensure proper credit to cultural sources",
   "Access classes from anywhere in Canada—in-studio, online, or hybrid",
   "Showcase your work in virtual exhibitions to a wider audience",
   "Join a culturally aware community with mentorship and peer support",

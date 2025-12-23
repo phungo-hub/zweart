@@ -182,7 +182,7 @@ Rewrite all website copy to match pitch deck positioning: "subcultural + ethical
 3. **Challenge → Solution framing**
    - Dispersed students → OMO hybrid access
    - Cultural appropriation concerns → Ethical teaching practices
-   - Limited expertise → Verified artists with cultural knowledge
+   - Limited expertise → Artist mentors with cultural knowledge
    - Low awareness → Community platform + virtual exhibitions
 
 4. **Keep it skimmable**
@@ -240,3 +240,272 @@ Rewrote all website copy to align with pitch deck positioning: "subcultural + et
 ---
 
 **Status:** ✅ Complete
+
+---
+
+# Fix #1: Remove "Verified Artists" Claims
+
+## Problem
+The phrase "verified artists" appears throughout the site but is an unsubstantiated claim. Need to replace with accurate, deck-aligned language.
+
+## Replacement Decision
+**Selected: "artist mentors"**
+
+Rationale:
+- Aligns with pitch deck's "Community + Mentorship" pillar
+- Concise (2 words)
+- Conveys teaching relationship without verification claims
+- Sounds trustworthy without overclaiming
+
+## Files to Modify (6 user-facing + 1 documentation)
+
+### User-Facing Copy
+- [x] `components/sections/OMOMethod.tsx:9`
+  - **Current:** "Learn subcultural arts from verified artists who ensure proper credit to cultural sources"
+  - **New:** "Learn subcultural arts from artist mentors who ensure proper credit to cultural sources"
+
+- [x] `components/sections/HowItWorks.tsx:25`
+  - **Current:** "Study with verified artists who teach proper credit to cultural sources and heritage."
+  - **New:** "Study with artist mentors who teach proper credit to cultural sources and heritage."
+
+- [x] `components/sections/ProgramsOverview.tsx:14`
+  - **Current:** "Learn traditional techniques from verified cultural artists"
+  - **New:** "Learn traditional techniques from experienced subcultural artist mentors"
+
+- [x] `components/sections/FAQ.tsx:18`
+  - **Current:** "Every artist on our platform is verified for cultural knowledge..."
+  - **New:** "Our artist mentors bring deep cultural knowledge..." (reword to avoid verification claim)
+
+- [x] `components/sections/Testimonials.tsx:25`
+  - **Current:** "...my kids learn from verified artists and showcase work..."
+  - **New:** "...my kids learn from artist mentors and showcase work..."
+
+- [x] `app/programs/page.tsx:81`
+  - **Current:** "verified artists who ensure proper credit to cultural sources"
+  - **New:** "artist mentors who ensure proper credit to cultural sources"
+
+### Documentation (tasks/todo.md)
+- [x] Line 185: Update "Verified artists with cultural knowledge" → "Artist mentors with cultural knowledge"
+
+## Review Section
+
+### Summary of Changes
+Replaced all "verified artist(s)" claims with "artist mentors" across 6 files.
+
+### Strings Changed
+| File | Before | After |
+|------|--------|-------|
+| `OMOMethod.tsx` | "from verified artists who" | "from artist mentors who" |
+| `HowItWorks.tsx` | "with verified artists who" | "with artist mentors who" |
+| `ProgramsOverview.tsx` | "from verified cultural artists" | "from subcultural artist mentors" |
+| `FAQ.tsx` | "Every artist...is verified for" | "Our artist mentors bring deep" |
+| `Testimonials.tsx` | "from verified artists and" | "from artist mentors and" |
+| `programs/page.tsx` | "verified artists who ensure" | "artist mentors who ensure" |
+
+---
+
+**Status:** ✅ Complete
+
+---
+
+# Fix #2: Programs Page Copy - Pitch Deck Alignment
+
+## Problem
+The Programs page (`app/programs/page.tsx`) has generic art-school curriculum copy. Need to rewrite to reflect pitch deck differentiators: subcultural enrichment, cultural context, ethical practice, community/mentorship, and virtual exhibitions.
+
+## Current Issues
+1. **Program descriptions** are generic (e.g., "playful introduction to the world of art")
+2. **"whatLearn" bullets** are entirely technical skills with no cultural context
+3. **No "What makes our programs different"** block to highlight differentiators
+4. **"How to Choose" section** is generic age/interest-based, missing ethical/cultural angle
+
+## Plan
+
+### 2.1 Update Program Descriptions
+- [x] **Kids Art (Ages 6-10)**
+  - Current: "A playful introduction to the world of art..."
+  - New: Emphasize subcultural foundations, cultural heritage connection, ethical practice
+
+- [x] **Teen Studio (Ages 11-17)**
+  - Current: "For serious young artists ready to develop advanced skills..."
+  - New: Emphasize portfolio with culturally credited work, ethical practice, virtual exhibitions
+
+- [x] **Digital Art & Animation**
+  - Current: "Step into the digital realm..."
+  - New: Emphasize digital tools for subcultural expression, cultural storytelling
+
+### 2.2 Rewrite "whatLearn" Bullets
+Each program's bullets should cover (in order):
+1. Cultural context + lineage-informed learning
+2. Ethical practice + proper credit
+3. Mentorship/community or exhibitions
+4. Technical skills (concise, 1-2 bullets max)
+
+- [x] Kids Art whatLearn (5 bullets → 4-5 with cultural focus)
+- [x] Teen Studio whatLearn (5 bullets → 4-5 with cultural focus)
+- [x] Digital Art whatLearn (5 bullets → 4-5 with cultural focus)
+
+### 2.3 Update "whoFor" Descriptions
+- [x] Add immigrant/second-gen family angle per pitch deck target personas
+- [x] Mention cultural connection/heritage interest
+
+### 2.4 Add "What Makes Our Programs Different" Section
+- [x] Create new section between programs and "How to Choose"
+- [x] Include 3-4 differentiators:
+  - Subcultural arts focus (not generic art school)
+  - Ethical teaching with proper credit
+  - Artist mentors with cultural knowledge
+  - Virtual exhibitions for student/artist work
+
+### 2.5 Update "How to Choose" Section
+- [x] Add subcultural/ethical angle to each program recommendation
+- [x] Keep age guidance but add cultural interest angle
+
+## Files to Modify
+| File | Changes |
+|------|---------|
+| `app/programs/page.tsx` | All above changes |
+
+## Copy Style Guidelines (from main rewrite)
+- Replace vague language with concrete benefits
+- Use trust language: proper credit, protect heritage, ethically taught
+- Keep it skimmable: short sentences, bullet points
+- Consistent terminology: "subcultural arts", "artist mentors", "proper credit"
+
+---
+
+## Review Section
+
+### Summary of Changes
+Rewrote Programs page copy to align with pitch deck differentiators.
+
+**Key changes:**
+1. **Program descriptions** - Replaced generic art-school language with subcultural/ethical focus
+2. **whatLearn bullets** - Now follow structure: cultural context → ethical practice → mentorship/exhibitions → technical skills
+3. **whoFor descriptions** - Added immigrant/multicultural family angle per pitch deck personas
+4. **New section** - Added "What Makes Our Programs Different" with 4 differentiators
+5. **How to Choose** - Updated recommendations with cultural connection angle
+
+### Copy Examples
+
+| Section | Before | After |
+|---------|--------|-------|
+| Kids description | "A playful introduction to the world of art" | "Subcultural art foundations taught ethically" |
+| Kids whatLearn | "Drawing fundamentals: shapes, lines" | "Cultural context: learn the stories and origins behind each art form" |
+| Kids whoFor | "Children ages 6-10 who are curious about art" | "Children ages 6-10 curious about cultural art traditions—especially those from immigrant or multicultural families" |
+| How to Choose | "Choose if your child is new to art, loves hands-on activities" | "Best for children new to art who want to explore cultural traditions and build foundations with proper credit to heritage" |
+
+### New Section Added
+"What Makes Our Programs Different" with 4 cards:
+- Subcultural Arts Focus
+- Ethical Teaching
+- Artist Mentors
+- Virtual Exhibitions
+
+---
+
+**Status:** ✅ Complete
+
+---
+
+# Fix #3: Stats Counter SSR/Accessibility Fix
+
+## Problem
+The `AnimatedCounter` component in `ProofStrip.tsx` initializes state to `0`, causing:
+1. SSR renders "0" / "0.0" instead of final values
+2. "0 flash" on initial page load before animation
+3. SEO/accessibility issues (screen readers and crawlers see "0")
+4. If JS fails, users see "0" forever
+
+## Current Code Issue
+```tsx
+function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+  const [count, setCount] = useState(0);  // <-- SSR renders 0
+  // ...
+}
+```
+
+## Solution Approach
+Use a two-layer approach:
+1. **Static layer** (always visible, accessible): Shows final value ("500+", "5", "4.9")
+2. **Animated layer** (visual only, aria-hidden): Overlays and counts up, then removed/hidden
+
+This ensures:
+- SSR shows final values immediately
+- No hydration mismatch (both layers render same on server/client)
+- Animation still works on client
+- Screen readers always read the final value
+- If JS fails, static layer is visible
+
+## Plan
+
+### 3.1 Update AnimatedCounter Component
+- [x] Add `finalDisplay` prop (string) for the formatted final value
+- [x] Render static final value as the base (accessible text)
+- [x] Add animated overlay that:
+  - Starts with `opacity: 0` or `visibility: hidden`
+  - Shows and animates only when `isInView` and JS is running
+  - Is `aria-hidden="true"`
+- [x] Use `position: absolute` for overlay to not affect layout
+- [x] Initialize `count` to `value` (not 0) to avoid hydration mismatch
+- [x] Track `hasAnimated` state to show/hide layers appropriately
+
+### 3.2 Update Metrics Data
+- [x] Add `display` string to each metric: "500+", "5", "4.9"
+- [x] Pass this to AnimatedCounter as the accessible/static text
+
+### 3.3 Add Accessibility Attributes
+- [x] Static value: `aria-label="{value} {label}"` on container
+- [x] Animated value: `aria-hidden="true"`
+
+### 3.4 Test Scenarios
+- [x] SSR output shows "500+", "5", "4.9" (view source)
+- [x] Animation still runs on scroll into view
+- [x] No hydration warnings in console
+- [x] Screen reader reads final values
+
+## Files to Modify
+
+| File | Changes |
+|------|---------|
+| `components/sections/ProofStrip.tsx` | Update AnimatedCounter, update metrics array, add aria attributes |
+
+## Implementation Notes
+- Keep changes localized to ProofStrip.tsx only
+- No new dependencies
+- Minimal DOM changes (just add wrapper/overlay structure)
+- Preserve existing styling
+
+---
+
+**Status:** ✅ Completed
+
+## Current Session Plan
+- [x] Re-read `components/sections/ProofStrip.tsx` to confirm current SSR/accessibility issues in `AnimatedCounter`.
+- [x] Restructure the counter with a static accessible layer and aria-hidden animated overlay to remove hydration/flash problems.
+- [x] Ensure metrics data pass formatted display strings and aria labels consistently to the counter.
+- [x] Smoke-test ProofStrip behavior (SSR output shows final values, no hydration warnings, animation works, static fallback visible without JS).
+
+## Review - Fix #3
+- Updated `components/sections/ProofStrip.tsx` to render static final values for SSR/a11y and overlay an aria-hidden animated counter that starts after the section enters view.
+- Animation now starts from 0 without exposing a "0" flash; static values remain visible as fallback if JS fails.
+- Metrics keep formatted display strings and container aria-labels to ensure screen readers announce final values.
+
+---
+
+# Fix #4: About Page Challenge List Bullet Formatting
+
+## Plan
+- [ ] Inspect the "The Challenge We Solve" list in `app/about/page.tsx` to confirm source of the doubled bullet artifacts.
+- [ ] Apply minimal change (remove default list-style or duplicate bullet character) so bullets render cleanly while keeping wording/structure.
+- [ ] Re-check the About page lists to ensure accessibility with semantic `<ul><li>` and no unintended layout changes.
+
+---
+
+# Fix #5: FAQ Answers Server-Rendered & Accessible
+
+## Plan
+- [ ] Locate FAQ accordion implementation and confirm why answers are not in initial HTML (conditional render on open).
+- [ ] Update `components/sections/FAQ.tsx` so answers are always in the DOM (SSR) but visually collapsed; keep accordion UX with semantic buttons and proper `aria-expanded`/`aria-controls`/`id`.
+- [ ] Ensure collapsed answers remain keyboard reachable when expanded and remain SEO-visible; avoid new dependencies and minimize code changes.
+- [ ] Re-check FAQ rendering for first-load HTML to confirm answers exist and accessibility attributes are correct.

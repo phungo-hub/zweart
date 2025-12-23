@@ -11,7 +11,7 @@ const programs = [
     title: "Kids Art (6-10)",
     description: "Subcultural art foundations with proper credit to heritage",
     benefits: [
-      "Learn traditional techniques from verified cultural artists",
+      "Learn traditional techniques from subcultural artist mentors",
       "Build confidence through creative expression",
       "Small classes via OMO—in-studio or online across Canada",
     ],
