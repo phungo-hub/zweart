@@ -550,3 +550,27 @@ This ensures:
 
 ## Review - Fix #8
 - Updated `components/sections/ProofStrip.tsx` to hide the static value visually while the animated overlay is shown (keeping it accessible), preventing overlapping numbers during animation; overlay remains aria-hidden and pointer-events-none.
+
+---
+
+# Fix #9: Challenge List Visual Cleanup
+
+## Plan
+- [x] Revisit the Challenge list in `app/about/page.tsx` to remove the inline bullet character and rely on a clean semantic list style.
+- [x] Switch to a single list style (`list-disc` + padding) with left alignment to avoid centered awkward spacing while keeping accent color where appropriate.
+- [x] Verify the list renders cleanly (no double markers, no awkward centering) and remains accessible.
+
+## Review - Fix #9
+- `app/about/page.tsx` Challenge list now uses a standard left-aligned `list-disc` with proper spacing; removed custom inline bullet glyphs to prevent double markers and awkward centering while keeping semantic `<ul><li>`.
+
+---
+
+# Fix #10: Challenge List Styling (Marker Color + Indent)
+
+## Plan
+- [x] Update `app/about/page.tsx` Challenge list to restore accent-colored bullets and adjust indentation for cleaner alignment.
+- [x] Keep semantic `<ul><li>` and existing spacing; only tweak list utilities (e.g., marker color and padding) to improve appearance without layout changes elsewhere.
+- [x] Verify bullets render orange, alignment looks clean, and text remains accessible.
+
+## Review - Fix #10
+- `app/about/page.tsx` Challenge list now uses accent-colored markers (`marker:text-accent`) with added padding for cleaner indentation; semantics and spacing preserved.

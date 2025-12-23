@@ -102,23 +102,11 @@ export default function AboutPage() {
             <p className="mt-6 text-center text-muted">
               Families across Canada face real barriers to subcultural art education:
             </p>
-            <ul className="mt-4 max-w-xl mx-auto space-y-2 text-muted list-none">
-              <li className="flex items-start gap-2">
-                <span className="text-accent font-bold">•</span>
-                <span>Students dispersed across geography with limited local expertise</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent font-bold">•</span>
-                <span>Risk of cultural appropriation without proper credit to sources</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent font-bold">•</span>
-                <span>Artists lacking sustainable income and exposure for their craft</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent font-bold">•</span>
-                <span>Low awareness of subcultural arts outside traditional communities</span>
-              </li>
+            <ul className="mt-6 max-w-xl mx-auto space-y-3 text-muted list-disc list-outside text-left pl-6 marker:text-accent">
+              <li>Students dispersed across geography with limited local expertise</li>
+              <li>Risk of cultural appropriation without proper credit to sources</li>
+              <li>Artists lacking sustainable income and exposure for their craft</li>
+              <li>Low awareness of subcultural arts outside traditional communities</li>
             </ul>
             <p className="mt-6 text-center text-muted">
               In a survey of 559 respondents, 43.5% agreed there should be more
